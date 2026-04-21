@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood Donor Connect</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>🩸 Blood Donor Connect</h1>
+
+  <input id="blood" placeholder="Enter Blood Group">
+  <br>
+
+  <button onclick="search()">Find Donors</button>
+  <button onclick="alert('🚨 Emergency Alert Sent!')">Emergency</button>
+
+  <p id="result"></p>
+
+  <script>
+    function search() {
+      let blood = document.getElementById("blood").value;
+      document.getElementById("result").innerText =
+        "Showing nearby donors for " + blood;
+    }
+  </script>
+
+</body>
+</html>
